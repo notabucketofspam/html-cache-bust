@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>SONIC SPEED</title>
+    <link rel="icon" type="image/png" href="favicon-sonic.png"/>
+    <link rel="stylesheet" type="text/css"
+      href="/css/sample-style.css">
+  </head>
+  <body>
+    <div>
+      <input style="width: 80px; height: 40px;" type="button" value="less" onclick="modulate_speed(false)">
+      <input style="width: 80px; height: 40px;" type="button" value="MOAR" onclick="modulate_speed(true)">
+      Cool Factor: <span id="cool_factor">1</span>
+    </div>
+    <div id="chili_dog" class="very_big_text"
+      style="margin-top: 200px; margin-right: 0px; margin-bottom: 200px; margin-left: 0px;">
+      CHILI DOGS YEAH
+    </div>
+    <script src="/js/sample-script.js"></script>
+    <script>
+      setInterval(vibrate_once, (1000 / 60) * 4, document.getElementById("chili_dog"));
+    </script>
+  </body>
+</html>
