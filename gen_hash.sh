@@ -17,7 +17,7 @@ find "./""$cssjsdir" -type f \( -name '*.js' -o -name '*.css' \) -exec sh -c '
     echo "$fpathfull"
     mkdir -p "$htmldir"/"$fdir"
     rm "$htmldir"/"$fdir"/"$fname"*"$fext"
-    cat "$file" > "$htmldir"/"$fdir"/"$fname"-"$fhash"."$fext"
+    cp "$file" "$htmldir"/"$fdir"/"$fname"-"$fhash"."$fext"
     for html in $(find ./"$htmldir" -type f \( -name "*.html" \)); do
       sed -i s,"/""$fdir""/""$fname".*"$fext","$fpathfull",g "$html"
     done
